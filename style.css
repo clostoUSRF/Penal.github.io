@@ -58,3 +58,53 @@ body {
 .panel{ border:1px solid rgba(0,255,156,.2); border-radius:10px; padding:16px; background: rgba(0, 12, 8, .6); }
 .panel h2{ color:var(--green); }
 
+.custom-grid {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Full-width row */
+.custom-grid .row.full {
+  grid-column: 1 / -1;
+  background: rgba(0,20,12,.65);
+  border: 1px solid rgba(0,255,156,.25);
+  padding: 12px;
+  border-radius: 8px;
+  color: var(--green);
+  font-weight: bold;
+}
+
+/* Split row: 2 columns */
+.custom-grid .row.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.custom-grid .row.split .cell {
+  background: rgba(0,12,8,.6);
+  border: 1px solid rgba(0,255,156,.25);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+/* Placeholder image box */
+.custom-grid .row.split .image {
+  display:flex; align-items:center; justify-content:center;
+  font-style: italic; color: var(--text);
+}
+
+/* Bottom row: 3 equal cells */
+.custom-grid .row.triple {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.custom-grid .row.triple .cell {
+  background: rgba(0,12,8,.6);
+  border: 1px solid rgba(0,255,156,.25);
+  border-radius: 8px;
+  padding: 12px;
+  text-align:center;
+}
+
