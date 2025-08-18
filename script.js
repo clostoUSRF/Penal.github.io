@@ -1,7 +1,7 @@
 const canvas = document.getElementById('matrix');
 const ctx = canvas.getContext('2d');
 let w,h,columns,drops,fontSize=16;
-const glyphs = 'アァカサタナハマヤャラワ0123456789$#@*&%';
+const glyphs = '40K319DSNW9023NDC0C98AE73J33D;
 function resize(){
   w = canvas.width = window.innerWidth;
   h = canvas.height = window.innerHeight;
@@ -24,3 +24,4 @@ function draw(){
   requestAnimationFrame(draw);
 }
 draw();
+
