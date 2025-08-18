@@ -120,4 +120,25 @@ body {
   image-rendering: pixelated;
 }
 
+.custom-grid .row.split .image {
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-grid .row.split .image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 255, 156, 0.1) 0px,
+    rgba(0, 255, 156, 0.1) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+
 
