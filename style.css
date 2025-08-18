@@ -108,6 +108,7 @@ body {
   text-align:center;
 }
 
+/* Image styling */
 .custom-grid .row.split .image img {
   max-width: 100%;
   height: auto;
@@ -115,30 +116,29 @@ body {
   border: 1px solid rgba(0,255,156,.25);
   box-shadow: 0 0 8px rgba(0,255,156,.2);
 
-  /* Hacker CRT effect */
+  /* Hacker CRT effect (green monochrome) */
   filter: grayscale(100%) contrast(1.2) brightness(0.8) sepia(1) hue-rotate(90deg) saturate(5);
   image-rendering: pixelated;
 }
 
+/* Make the container hold the overlay */
 .custom-grid .row.split .image {
   position: relative;
   overflow: hidden;
 }
 
+/* Scanline overlay */
 .custom-grid .row.split .image::after {
   content: "";
   position: absolute;
   inset: 0;
   background: repeating-linear-gradient(
     to bottom,
-    rgba(0, 255, 156, 0.1) 0px,
-    rgba(0, 255, 156, 0.1) 2px,
+    rgba(0, 255, 156, 0.15) 0px,
+    rgba(0, 255, 156, 0.15) 2px,
     transparent 2px,
     transparent 4px
   );
-  pointer-events: none;
-  mix-blend-mode: multiply;
+  pointer-events: none; /* clicks go through */
+  mix-blend-mode: multiply; /* blend green with the image */
 }
-
-
-
